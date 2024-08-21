@@ -1,14 +1,20 @@
 function minDate(dates) {
   //write you code here
-	const dateObjects=date.map(dateStr=>new Date(dateStr));
-	const minDateObj=new Date(Math.min(dateObjects))
-	function formateDate{
-		const year=date.getFullYear();
-		const month=string(date.getMonth()+1).padStart(2,'0');
-		const day=string(date.getDay()).padStart(2,'0');
-		return `${year}/${month}/${day}`;
-	}
-	return formateDate(minDateObj);
+	const dateObjects = dates.map(dateStr => new Date(dateStr));
+  
+  // Find the minimum date object
+  const minDateObject = new Date(Math.min(...dateObjects));
+  
+  // Helper function to format the Date object into "YYYY/MM/DD"
+  function formatDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // months are 0-based
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}/${month}/${day}`;
+  }
+  
+  // Return the formatted minimum date
+  return formatDate(minDateObject);
 }
 
 // Do not change the code
