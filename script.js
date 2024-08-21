@@ -8,6 +8,7 @@ function minDate(dates) {
 		const day=string(date.getDay()).padStart(2,'0');
 		return `${year}/${month}/${day}`;
 	}
+	return formateDate(minDateObj);
 }
 
 // Do not change the code
