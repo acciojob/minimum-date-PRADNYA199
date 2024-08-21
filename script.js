@@ -1,5 +1,13 @@
 function minDate(dates) {
   //write you code here
+	const dateObjects=date.map(dateStr=>new Date(dateStr));
+	const minDateObj=new Date(Math.min(dateObjects))
+	function formateDate{
+		const year=date.getFullYear();
+		const month=string(date.getMonth()+1).padStart(2,'0');
+		const day=string(date.getDay()).padStart(2,'0');
+		return `${year}/${month}/${day}`;
+	}
 }
 
 // Do not change the code
